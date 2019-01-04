@@ -6,7 +6,9 @@ A .NET application and resources for JSON Web Token authentication.
 
 <code>
 using Newtonsoft.Json;
+            
 using System.Security.Cryptography;
+
 </code>
 
 ## Token Header
