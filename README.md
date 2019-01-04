@@ -3,8 +3,11 @@ A .NET application and resources for JSON Web Token authentication.
 
 
 ## Dependencies
+
+<code>
 using Newtonsoft.Json;
 using System.Security.Cryptography;
+</code>
 
 ## Token Header
             TokenHeader tokenHeader = new TokenHeader();
