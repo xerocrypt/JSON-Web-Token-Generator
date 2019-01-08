@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <script src="jquery-3.3.1.min.js"></script>
+        <script src="jquery.base64.min.js"></script>  
+        <script src="crypto-js.min.js"></script>
+        <script src="hmac-sha256.min.js"></script>
+        <script src="enc-base64.min.js"></script>  
+    </head>
+
+    <body>
+
+        <script>
+            $(document).ready(function()
+            {
+                var secretKey = "Password1";
+
+                // The token header as unencoded JSON. The values here shouldn't change
+                var headerjson = '{ "alg": "HS256", "typ": "JWT" }',
+                    headerobj = JSON.parse(headerjson);
+
+                // The token payload as unencoded JSON. Contains the user name, subject and identifier(s)
+                var payloadjson = '{ "sub": "x555", "name": "Michael", "iat": 44365454654645644543534, "issued": ' + Math.floor(Date.now() / 1000) + ' }',
+                    payloadobj = JSON.parse(payloadjson);
+
+                var payloadbox = document.getElementById('tokenpayload');
+               payloadbox.value = payloadjson;
+
+
+                // Encode header segment
+                headerb64 = btoa(unescape(encodeURIComponent(headerjson)));
+                headerb64str = decodeURIComponent(escape(window.atob(headerb64)));
+
+                // Encode payload segment
+                payloadb64 = btoa(unescape(encodeURIComponent(payloadjson)));
+                payloadb64str = decodeURIComponent(escape(window.atob(payloadb64)));
+
+                // Display the Base64-encoded token header
+                var headerbox = document.getElementById('encodedheader');
+                headerbox.value = headerb64;
+
+                // Display the Base64-encoded payload
+                var payloadbox = document.getElementById('encodedpayload');
+                payloadbox.value = payloadb64;
+
+                // The unsigned token is the Base4-encoded header and payload combined.
+                var unsignedToken = headerb64 + "." + payloadb64;
+
+                // Use HMAC SHA256 to sign the unsigned token using the secret key
+                var tokenSignature = CryptoJS.HmacSHA256(unsignedToken, secretKey);
+                var encodedTokenSignature = CryptoJS.enc.Base64.stringify(tokenSignature);
+    
+                gentoken.value = encodedTokenSignature;
+
+                // Display the signed token, which is all three Base4-encoded segments
+                var allsegments = document.getElementById('segmentsbox');
+                allsegments.value = headerb64 + "." + payloadb64 + "." + encodedTokenSignature;
+
+
+                var unixtime = Math.floor(Date.now() / 1000);
+                var tbox = document.getElementById('timebox');
+                tbox.value = unixtime;
+
+            });
+        </script>
+
+        Token Payload:</br>
+        <textarea id="tokenpayload"></textarea></br>
+
+
+        Token Header:</br>
+        <textarea id="encodedheader"></textarea></br>
+
+        Token Payload:</br>
+        <textarea id="encodedpayload"></textarea></br>
+
+        Token Signature:</br>
+        <textarea id="gentoken"></textarea></br>
+
+        Full JWT Token:</br>
+        <textarea id="segmentsbox"></textarea></br>
+
+
+        T+:</br>
+        <textarea id="timebox"></textarea></br>
+
+    </body>
+
+</html>
