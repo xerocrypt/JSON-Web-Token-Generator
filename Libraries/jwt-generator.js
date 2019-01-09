@@ -18,7 +18,7 @@ function TokenPayload(payloadData)
     return encodedPayloadString;
 }
 
-function SignToken(headerData, payloadData)
+function SignToken(headerData, payloadData, secretKey)
 {
     var headerjson = ' + headerData + ',
     headerobj = JSON.parse(headerjson);
