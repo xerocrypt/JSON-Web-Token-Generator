@@ -12,7 +12,7 @@ namespace JWT_Generator
     class jwt_generator
     {
 
-        public string ReadSegments(string header, string payload, string secretKey)
+        public string GenerateToken(string header, string payload, string secretKey)
         {
             string encodedHeaderString = ConvertHeaderToJson(header);
             string encodedPayloadString = ConvertPayloadToJson(payload);
