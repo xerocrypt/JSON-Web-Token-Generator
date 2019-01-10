@@ -1,0 +1,9 @@
+C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\jwtgenerator\bin\Debug\jwtgenerator.dll
+C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\jwtgenerator\bin\Debug\jwtgenerator.pdb
+C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\jwtgenerator\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\jwtgenerator\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\jwtgenerator\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\jwtgenerator\obj\Debug\jwtgenerator.csproj.CoreCompileInputs.cache
+C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\jwtgenerator\obj\Debug\jwtgenerator.csproj.CopyComplete
+C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\jwtgenerator\obj\Debug\jwtgenerator.dll
+C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\jwtgenerator\obj\Debug\jwtgenerator.pdb

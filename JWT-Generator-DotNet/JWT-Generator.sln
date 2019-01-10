@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWT-Generator", "JWT-Generator\JWT-Generator.csproj", "{F09A356C-7D6B-4B92-A7D0-E5758838D6C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jwtgenerator", "jwtgenerator\jwtgenerator.csproj", "{9FE0EFAE-FF88-47C2-B241-3EF2EBCD4124}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F09A356C-7D6B-4B92-A7D0-E5758838D6C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F09A356C-7D6B-4B92-A7D0-E5758838D6C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F09A356C-7D6B-4B92-A7D0-E5758838D6C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FE0EFAE-FF88-47C2-B241-3EF2EBCD4124}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FE0EFAE-FF88-47C2-B241-3EF2EBCD4124}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FE0EFAE-FF88-47C2-B241-3EF2EBCD4124}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FE0EFAE-FF88-47C2-B241-3EF2EBCD4124}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -23,12 +29,15 @@ Global
 		SolutionGuid = {C6A0B70A-49C9-4F02-9017-E12C3ECBC1D6}
 	EndGlobalSection
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 2
+		SccNumberOfProjects = 3
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://nhs-informatics.visualstudio.com/defaultcollection
 		SccLocalPath0 = .
 		SccProjectUniqueName1 = JWT-Generator\\JWT-Generator.csproj
 		SccProjectName1 = JWT-Generator
 		SccLocalPath1 = JWT-Generator
+		SccProjectUniqueName2 = jwtgenerator\\jwtgenerator.csproj
+		SccProjectName2 = jwtgenerator
+		SccLocalPath2 = jwtgenerator
 	EndGlobalSection
 EndGlobal

@@ -1,4 +1,7 @@
+C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\JWT-Generator\bin\Debug\jwt-generator.cs
 C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\JWT-Generator\bin\Debug\JWT-Generator.exe.config
+C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\JWT-Generator\bin\Debug\JWT-Generator.exe.manifest
+C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\JWT-Generator\bin\Debug\JWT-Generator.application
 C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\JWT-Generator\bin\Debug\JWT-Generator.exe
 C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\JWT-Generator\bin\Debug\JWT-Generator.pdb
 C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\JWT-Generator\bin\Debug\Microsoft.Win32.Primitives.dll
@@ -101,12 +104,14 @@ C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\JWT-Genera
 C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\JWT-Generator\bin\Debug\Newtonsoft.Json.dll
 C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\JWT-Generator\bin\Debug\Newtonsoft.Json.pdb
 C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\JWT-Generator\bin\Debug\Newtonsoft.Json.xml
-C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\JWT-Generator\obj\Debug\JWT-Generator.csprojAssemblyReference.cache
 C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\JWT-Generator\obj\Debug\JWT-Generator.exe.config
 C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\JWT-Generator\obj\Debug\JWT_Generator.frmTokenGenerator.resources
 C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\JWT-Generator\obj\Debug\JWT_Generator.Properties.Resources.resources
 C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\JWT-Generator\obj\Debug\JWT-Generator.csproj.GenerateResource.cache
 C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\JWT-Generator\obj\Debug\JWT-Generator.csproj.CoreCompileInputs.cache
+C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\JWT-Generator\obj\Debug\JWT-Generator.TrustInfo.xml
+C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\JWT-Generator\obj\Debug\JWT-Generator.exe.manifest
+C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\JWT-Generator\obj\Debug\JWT-Generator.application
 C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\JWT-Generator\obj\Debug\JWT-Generator.csproj.CopyComplete
 C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\JWT-Generator\obj\Debug\JWT-Generator.exe
 C:\Users\mi168661\Documents\Visual Studio 2017\Projects\JWT-Generator\JWT-Generator\obj\Debug\JWT-Generator.pdb

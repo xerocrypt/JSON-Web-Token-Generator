@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Json.Net;
 using Newtonsoft.Json;
 using System.Security.Cryptography;
 
@@ -21,49 +14,20 @@ namespace JWT_Generator
         }
 
 
-        public class TokenHeader
-        {
-            public string alg { get; set; }
-            public string typ { get; set; }
-        }
-
-        public class TokenPayload
-        {
-            public string sub { get; set; }
-            public string name { get; set; }
-            public string admin { get; set; }
-        }
-
-
         private void button1_Click(object sender, EventArgs e)
         {
-            //These are static token header values
-            TokenHeader tokenHeader = new TokenHeader();
-            tokenHeader.alg = "HS256";
-            tokenHeader.typ = "JWT";
-
-
-
-            TokenPayload tokenPayload = new TokenPayload();
-            tokenPayload.sub = txtTokenSubject.Text;
-            tokenPayload.name = txtName.Text;
-            tokenPayload.admin = cmbIsAdmin.Text;
-
             string myKey = txtKey.Text;
 
-
-            string headerString = JsonConvert.SerializeObject(tokenHeader);
-            string payloadString = JsonConvert.SerializeObject(tokenPayload);
-
+            string tokenHeader = txtInputHeader.Text;
+            string tokenPayload = txtInputPayload.Text;
 
             // Convert the token header to the actual token
-            string encodedHeaderString = ConvertHeaderToJson(headerString);
-            string encodedPayloadString = ConvertPayloadToJson(payloadString);
+            string encodedHeaderString = ConvertHeaderToJson(tokenHeader);
+            string encodedPayloadString = ConvertPayloadToJson(tokenPayload);
             string encodedSignature = GetEncodedSignature(myKey, encodedHeaderString, encodedPayloadString);
 
 
-            DisplayGeneratedToken(headerString, payloadString, encodedHeaderString, encodedPayloadString, encodedSignature);
-
+            DisplayGeneratedToken(tokenHeader, tokenPayload, encodedHeaderString, encodedPayloadString, encodedSignature);
         }
 
 
@@ -116,6 +80,11 @@ namespace JWT_Generator
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmTokenGenerator_Load(object sender, EventArgs e)
         {
 
         }

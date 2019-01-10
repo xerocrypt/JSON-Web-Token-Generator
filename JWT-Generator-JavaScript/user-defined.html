@@ -15,7 +15,7 @@
         <script>
             function generateToken()
             {
-                var secretKey = "Password1";
+                var secretKey = usersecretkey.value;
 
                 // The token header as unencoded JSON. The values here shouldn't change
                 var headerjson =  userheader.value,
@@ -72,6 +72,9 @@
                     <font size="2">Type or paste the JSON payload data here.</font>
                     <textarea class="form-control" rows="10" id="userpayload">
                     </textarea></br>
+
+                    <label for="usr">Secret Key:</label>
+                    <input type="text" class="form-control" id="usersecretkey">
 
                     </br>
                     <button class="btn btn-default" onclick="generateToken()">Generate Token</button>

@@ -15,7 +15,7 @@
         <script>
             function generateToken()
             {
-                var secretKey = "Password1";
+                var secretKey = usersecretkey.value;
 
                 // The token header as unencoded JSON. The values here shouldn't change
                 var headerjson = '{ "alg": "' + signaturealgorithm.value + '", "typ": "' + jsontype.value + '" }',
@@ -89,6 +89,12 @@ https://auth0.com/?utm_source=jwtio&utm_campaign=craftedby
 
                     <label for="usr">Token ID:</label>
                     <input type="text" class="form-control" id="tokenid">
+                </div>
+
+
+                <div class="well">
+                    <label for="usr">Secret Key:</label>
+                    <input type="text" class="form-control" id="usersecretkey">
                 </div>
 
                 </br>
