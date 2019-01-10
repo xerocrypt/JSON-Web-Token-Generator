@@ -18,11 +18,11 @@
                 var secretKey = "Password1";
 
                 // The token header as unencoded JSON. The values here shouldn't change
-                var headerjson = '{ "alg": "' + signaturealgorithm.value + '", "typ": "' + jsontype.value + '" }',
+                var headerjson =  userheader.value,
                     headerobj = JSON.parse(headerjson);
 
                 // The token payload as unencoded JSON. Contains the user name, subject and identifier(s)
-                var payloadjson = '{ "sub": "' + tokensubject.value + '", "name": "' + tokenname.value + '", "iat": ' + tokenid.value + ', "issued": ' + Math.floor(Date.now() / 1000) + ' }',
+                var payloadjson = userpayload.value,
                     payloadobj = JSON.parse(payloadjson);
 
                 var payloadbox = document.getElementById('tokenpayload');
@@ -57,44 +57,26 @@
                 // Display the signed token, which is all three Base4-encoded segments
                 var allsegments = document.getElementById('segmentsbox');
                 allsegments.value = headerb64 + "." + payloadb64 + "." + encodedTokenSignature;
-
-
-                var unixtime = Math.floor(Date.now() / 1000);
-                var tbox = document.getElementById('timebox');
-                tbox.value = unixtime;
-
             };
         </script>
-
-https://auth0.com/?utm_source=jwtio&utm_campaign=craftedby
 
         <div class="container">
             <div class="col-sm-6">
                 <div class="well">
-                    <h3>Header Fields</h3>
-                    <label for="usr">Signature Algorithm:</label>
-                    <input type="text" class="form-control" id="signaturealgorithm" placeholder="HS256">
+                    <label for="userheader">Token Header:</label></br>
+                    <font size="2">Type or paste the JSON header data here.</font>
+                    <textarea class="form-control" rows="10" id="userheader">
+                    </textarea></br>
 
-                    <label for="usr">JSON Type:</label>
-                    <input type="text" class="form-control" id="jsontype" placeholder="JWT">
+                    <label for="userpayload">Token Payload:</label></br>
+                    <font size="2">Type or paste the JSON payload data here.</font>
+                    <textarea class="form-control" rows="10" id="userpayload">
+                    </textarea></br>
+
+                    </br>
+                    <button class="btn btn-default" onclick="generateToken()">Generate Token</button>
+
                 </div>
-
-                <div class="well">
-                    <h3>Payload Fields</h3>
-                    <label for="usr">Name:</label>
-                    <input type="text" class="form-control" id="tokenname">
-
-                    <label for="usr">Subject:</label>
-                    <input type="text" class="form-control" id="tokensubject">
-
-                    <label for="usr">Token ID:</label>
-                    <input type="text" class="form-control" id="tokenid">
-                </div>
-
-                </br>
-                <button class="btn btn-default" onclick="generateToken()">Generate Token</button></br>
-
-                Already have JSON data or want to define your own fields? <a href="user-defined.html">Try the user-defined token generator here...</a></br>
             </div>
 
             <div class="col-sm-6">
